@@ -1,0 +1,5 @@
+<div id="container">
+  <div class="row flex flex-column md:flex-row flex-wrap" *ngFor="let row of data">
+    <app-bingo-box *ngFor="let elem of row" [data]=elem></app-bingo-box>
+  </div>
+</div>

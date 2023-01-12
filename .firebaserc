@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "bingo-z-a879d": {
+      "hosting": {
+        "bingo-z": [
+          "bingo-z-a879d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "bingo-z-a879d"
+  }
+}

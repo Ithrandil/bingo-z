@@ -1,0 +1,14 @@
+<div class="bingoCard">
+  <div [ngClass]="data.disabled? 'frontLogo ' : 'bingoCard-side front text-center'"
+       class="flex justify-content-center align-items-center"
+  >
+    <img *ngIf="data.disabled" class="logoZBox" src="./assets/images/logo_zenika.png" alt="logo zenika">
+    <div>{{data.front}}</div>
+  </div>
+  <div *ngIf="!data.disabled" (click)="openModal(data)" [ngClass]="{'discoveredPersonBack':data.back?.name}"
+       class="bingoCard-side back flex flex-column justify-content-center align-items-center text-center">
+    <div >{{data.back?.name ? data.back?.name : "?" }}</div>
+    <img *ngIf="!!data.back?.picture" [src]=picturePath alt="person picture" class="imgBackCard">
+  </div>
+</div>
+<app-modal  [(showModal)]="displayResponsive" [data]="data.modal"></app-modal>

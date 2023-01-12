@@ -1,0 +1,57 @@
+/* Card style*/
+.bingoCard {
+  perspective: 150rem;
+  height: 10rem;
+  width: 10rem;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.bingoCard-side {
+  height: 10rem;
+  width: 9.9rem;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  color: white;
+}
+
+.bingoCard-side.back {
+  transform: rotateY(-180deg);
+  background-color: #4158D0;
+  background-image: linear-gradient(45deg, #EE2238 0%, #BF1D67 100%);
+  //background-image: linear-gradient(45deg, #00EB84 0%, #00E3EC 100%);
+}
+
+.bingoCard-side.front {
+  background-color: #0093E9;
+  background-image: linear-gradient(45deg, #EE2238 0%, #BF1D67 100%);
+}
+
+.bingoCard:hover .bingoCard-side.front {
+  transform: rotateY(180deg);
+}
+
+.bingoCard:hover .bingoCard-side.back {
+  transform: rotateY(0deg);
+}
+
+.imgBackCard {
+  border-radius: 50%;
+  max-height: 6rem;
+  width: auto;
+}
+
+.discoveredPersonBack {
+  cursor: pointer;
+}
+
+.frontLogo {
+  height: 10rem;
+}
+.logoZBox {
+  max-width:10rem;
+}
