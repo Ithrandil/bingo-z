@@ -7,6 +7,25 @@ import {BingoBox} from "./models/bingo-box";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+/*{front: "1 an",
+  back: { name: "", picture: ""},
+  disabled:false,
+  modal: {
+    title: "",
+    text: this.formatModalText({
+            name: "",
+            a:"",
+            b:"",
+            c:"",
+            d:"",
+            e:"",
+            f:"",
+            g:"",
+            h:"",
+          }),
+    picture: "",
+  }
+},*/
   public data: Array<BingoBox[]> = [
     [
       {front: "", back: { name: "", picture: ""}, disabled: true},
@@ -36,7 +55,7 @@ export class AppComponent {
         },
         disabled: false,
         modal: {
-          title: "Guillaume Le Floch, Directeur, consultant et formateur",
+          title: "Guillaume Le Floch, Directeur, Consultant et Formateur",
           text: this.formatModalText({
             name: "Guillaume Le Floch",
             a:"Je suis Guillaume Le Floch, je suis chez Z depuis 3 ans et demi. J'ai commencé à Grenoble puis j'ai été muté à Niort il y à un an et demi. Je fais beaucoup de back et un peu de front.",
@@ -52,14 +71,51 @@ export class AppComponent {
         }
       },
       {front: "", back: { name: "", picture: ""}, disabled:true},
-      {front: "1 an", back: { name: "", picture: ""}, disabled:false},
+      {front: "1 an",
+        back: { name: "Claire Juban", picture: "claire_juban.jpeg"},
+        disabled:false,
+        modal: {
+          title: "Claire Juban, Office Manager",
+          text: this.formatModalText({
+            name: "Claire Juban",
+            a:"Vue par ses collègues, Claire est “un vent de fraîcheur, drôle, disponible, qui fait avancer les sujets, débrouillarde, organisée, à l’écoute…” Heureusement, elle reste humble!",
+            b:"Tout juste un an!",
+            c:"Je suis Office Manager, c'est un poste très polyvalent. Je gère les locaux, les prestataires de l'agence, l'onboarding et l'offboarding des Z. Mais aussi la gestion des fournitures, l'administratif commerciale de certain clients, la relation avec les écoles. Actuellement il y a aussi le réaménagement des locaux. Je m'occupe aussi des courses de la grande famille Z!",
+            d:"J'ai candidaté à une offre d'emploi.",
+            e:"L'état d'esprit, la bienveillance, on peut être soi même et ne pas avoir à porter un masque ou une casquette pour l'emploi. C'est valorisé et ça te pousse à t'améliorer.",
+            f:"J'avais des attentes très haute dans la qualité de mon travail que j'ai pu trouver ici, ce ne je n'avais pas forcément trouvé dans tout mes emplois.",
+            g:"Essayer de battre Yann à Mario Kart.",
+            h:"Transparence - Convivialité - Bienveillance",
+          }),
+          picture: "claire_juban.jpeg",
+        }
+      },
       {front: "", back: { name: "", picture: ""}, disabled:true},
       {front: "", back: { name: "", picture: ""}, disabled:true},
       {front: "Badminton", back: { name: "", picture: ""}, disabled: false},
     ],
     [
       {front: "Javascript", back: { name: "", picture: ""}, disabled:false},
-      {front: "Recrutement", back: { name: "", picture: ""}, disabled:false},
+      {
+        front: "Recrutement",
+        back: { name: "Jehane Zouane", picture: "jehane_zouane.png"},
+        disabled:false,
+        modal: {
+          title: "Jehane Zouane, Recruteuse",
+          text: this.formatModalText({
+            name: "Jehane Zouhane",
+            a:"Je m'appelle Jehane, 30 ans, chez Z depuis deux ans. J'aime les animaux (#animalLover)",
+            b:"Du coup, 2 ans. :D",
+            c:"Recruteuse pour Nantes et Niort.",
+            d:"J'ai candidaté à une offre.",
+            e:"Le fait d'être dans une boite d'experts qui ne se prennent pas la tête. Ce côté à la cool en plus se retrouve dans la hiérarchie aussi. Pas de chichis ici!",
+            f:"Chez Zenika, les enjeux de recrutement ne sont pas que pour les recruteurs mais pour toute l'agence. Tout le monde s'implique dedans. Ce sont donc des victoires collectives et des échecs partagés.",
+            g:"Faire un talk à la TZ!",
+            h:"Bienveillance - Transparence - Opportunité",
+          }),
+          picture: "jehane_zouane.png",
+        },
+      },
       {front: "DevOps", back: { name: "", picture: ""}, disabled:false},
       {front: "Système U", back: { name: "", picture: ""}, disabled:false},
       {front: "", back: { name: "", picture: ""}, disabled:true},
