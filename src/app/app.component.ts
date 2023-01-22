@@ -29,16 +29,69 @@ export class AppComponent {
   public data: Array<BingoBox[]> = [
     [
       {front: "", back: { name: "", picture: ""}, disabled: true},
-      {front: "DA", back: { name: "", picture: ""}, disabled: false},
+      {
+        front: "DA",
+        back: { name: "Antoine Bonneau", picture: "antoine_bonneau.jpg"},
+        disabled: false,
+        modal: {
+          title: "Antoine Bonneau, Directeur de l'agence de Nantes",
+          text: this.formatModalText({
+            name: "Antoine Bonneau",
+            a:"DA de l’agence de Zenika Nantes et un petit bout de Niort depuis 2015. J’ai fait 3 ans de prestataire à la Macif, Thalès, entre autres. Très intéressé de tout l’univers tech, j'intervient toujours sur les tendances IT par exemple avec les ZenBox. J’essaie de maintenir ma culture IT et à coté de ça je suis musicien. Guitare, harmonica et chanteur surtout.",
+            b:"2015",
+            c:"Directeur d’agence.",
+            d:"Avant j'étais chez SQLI, je m’occupais de l’équipe commerciale. On était 130 avec de beaux projets mais le coté groupe était important, on passait beaucoup trop de temps en réunion en interne. J’en ai été lassé, j’ai voulu repartir sur une plus petite équipe avec plein d’autonomie pour développer. J’avais écris à plusieurs entreprises pour leur proposer de développer une agence à Nantes. Je connaissais aussi Z via Julien Landuré. Je n'ai pas eu de réponses. 3 mois après l’offre repop, je les contacte, ils avaient pas reçu mon CV. :D",
+            e:"Le premier jour on m’a appelé, souhaité bonne chance et donné plein de noms pour m’aider sur des sujets. C’était pas 'démerde toi', mais 'on te fais pleinement confiance', dès le premier jour!",
+            f:" Entre les agences, il y a une vraie communauté, pas de concurrence mais un travail collectif. Une grosse culture du partage, commerciaux, DA, consultants, c’est hyper important.",
+            g:"Essayer le melting potes, en plus on a une carte de fidélité à vie! La soirée des Zoscars, le bateau ouche, les moments de convivialité de l’agence. Et tout le monde me parle du voyage du CE, il va falloir absolument essayer.",
+            h:"Nos valeurs sont bien résumées : transparence, partage et convivialité. C’est marqué nul part et c’est là dessus qu’on recrute les gens sans s’en rendre compte. Il y en a un 4eme qui est la bienveillance.",
+          }),
+          picture: "antoine_bonneau.jpg",
+        }
+      },
       {front: "", back: { name: "", picture: ""}, disabled: true},
       {front: "", back: { name: "", picture: ""}, disabled: true},
       {
         front: "Ancien(ne) dev",
-        back: { name: "", picture: ""},
+        back: { name: "Séverine Luzeau", picture: "severine_luzeau.jpg"},
         disabled: false,
+        modal: {
+          title: "Séverine Luzeau, Directrice Technique et ancienne dev",
+          text: this.formatModalText({
+            name: "Séverine Luzeau",
+            a:"Séverine, j’habite à la campagne, je suis chanteuse et sportive (je me prépare au GR10). Je suis coach agile et DT Z depuis le mois de septembre.",
+            b:"26 mars 2018",
+            c:"Directrice Technique de l'agence de Nantes.",
+            d:"Cooptation après 2 ans à me tanner, Nicolas Lepage a réussi a me faire venir chez Z!",
+            e:"La liberté et la confiance qu’on m’a accordé immédiatement. Tellement c’était énorme, je n’ai pas réussi à prendre d’initiatives. J’ai mis un an avant d’intégrer ça, de proposer des choses et y participer. Aujourd'hui encore ça m’étonne.",
+            f:"En agilité, c’est de faire partie d’un groupe. Avant j’étais toute seule et en arrivant ici j’ai rencontré beaucoup de monde et des plus expérimentés. C’est génial de pouvoir échanger.",
+            g:"Découvrir le programme women empowerment fait chez Zenika.",
+            h:"Épanouissement - Challenge - Convivialité",
+          }),
+          picture: "severine_luzeau.jpg",
+        }
         },
       {front: "", back: { name: "", picture: ""}, disabled: true},
-      {front: "Plus actif pour l'agence", back: { name: "", picture: ""}, disabled: false},
+      {
+        front: "Zoscar 'Plus actif pour l'agence'",
+        back: { name: "Marie Viley", picture: "marie_viley.jpg"},
+        disabled: false,
+        modal: {
+          title: "Marie Viley, Directrice d'Agence Locale et gagnante du Zoscar de la personne la plus active pour l'agence",
+          text: this.formatModalText({
+            name: "Marie Viley",
+            a:"Commerciale et manager depuis 5 ans chez Z. Ma passion c’est la bière et le métal.",
+            b:"13 Novembre 2017 en tant que recruteuse pour l’agence de Nantes, Rennes et Lille.",
+            c:"Commerciale et manager on appelle ca DAL (Directrice d'Agence locale) ici. Je m’occupe de clients et je manage des personnes dans l’équipe de Nantes.",
+            d:"J’étais dans une boite de merde qui m’a vendu du rêve, ce qui était plutôt faux. Ma manager était adepte du micro management et j’ai commencé a chercher ailleurs. je suis allé au great place to work a Paris, j’ai vu Carl parler de Zenika et je me suis dit 'Waou ca a l’air trop stylé!'. Plus tard j’ai vu une offre de recrutement et j’ai dit 'Lets go!'.",
+            e:"Ce qu’on m’a dit en entretien au final c’était vrai. On ne m’a pas vendu du rêve. La possibilité de changer de postes. On te fait confiance, tester, revenir en arrière si ca ne va pas. Il n’y a pas de problèmes, c’est incroyable.",
+            f:"La plupart des commerciaux des autres ESN sont des gros mytho alors qu’il faut juste être sincère. Ça ne sert à rien de vendre du rêve à un client. Et je comprend pas que les autres n'ont pas compris ça. Ici c’est pas le cas. :D",
+            g:"Le barbecue sur la terrasse à Nantes!",
+            h:"Autonomie - Fun - Responsabilité (on est tous responsable de notre entreprise)",
+          }),
+          picture: "marie_viley.jpg",
+        }
+      },
       {
         front: "Coca Zéro",
         back: { name: "Raphaël Grand", picture: "raphael_grand.jpeg"},
@@ -59,7 +112,26 @@ export class AppComponent {
           picture: "raphael_grand.jpeg",
         }
       },
-      {front: "Jeux vidéo", back: { name: "", picture: ""}, disabled: false},
+      {
+        front: "Jeux vidéo",
+        back: { name: "Yann Bertrand", picture: "yann_bertrand.jpg"},
+        disabled: false,
+        modal: {
+          title: "Yann Bertrand, Consultant fullstack",
+          text: this.formatModalText({
+            name: "Yann Bertrand",
+            a:"Dev depuis ma plus tendre jeunesse, tombé dedans quand j’étais petit, vers 12 - 13 ans. Depuis, je suis toujours motivé et excité par les projets web. J'ai commencé par du php puis j'ai développé une passion pour le front avec les framework JS.",
+            b:"Septembre 2018, un peu plus de 4 ans, le même jour que Clément.",
+            c:"Consultant officiellement, aujourd’hui, lead dev chez pix, c'est le deuxième projet où je suis lead dev.",
+            d:"J’ai suivi une formation Z en 2016-7 et j’ai adoré la boite, pouvoir former des gens en info. Je suis parti au canada quelques mois puis j’ai candidaté chez Zenika et ça s'est très bien passé.",
+            e:"L’expertise des gens que je peux côtoyer au quotidien. J’ai des vrais discussions de fond de qualité qui permet d’avoir une meilleure communication par la suite en mission.",
+            f:"D’essayer de concrétiser de vraies choses avec de la théorie et beaucoup de pratiques. D’essayer de faire les choses bien et ne pas hésiter à remettre en question ce qui est demandé pour répondre à un besoin des gens et pas seulement développer un truc sexy techniquement.",
+            g:"C'est à double tranchant mais faire de la formation, c'est passionnant d’expliquer ce que tu fais mais c'est couteux en énergie. Des fois, expliquer à des gens qui ont pas envie d’être là peut être compliqué.",
+            h:"Passion - Atmosphère / Bon vivre - Liberté (de s’engager dans ce que tu as envie de faire)",
+          }),
+          picture: "yann_bertrand.jpg",
+        }
+      },
 
     ],
     [
@@ -129,7 +201,26 @@ export class AppComponent {
       },
       {front: "", back: { name: "", picture: ""}, disabled:true},
       {front: "", back: { name: "", picture: ""}, disabled:true},
-      {front: "Badminton", back: { name: "", picture: ""}, disabled: false},
+      {
+        front: "Badminton",
+        back: { name: "Alan Duchêne", picture: "alan_duchene.jpg"},
+        disabled: false,
+        modal: {
+          title: "Alan Duchêne, Consultant fullstack",
+          text: this.formatModalText({
+            name: "Alan Duchêne",
+            a:"Alan Duchêne, dev fullstack touche à tout. J’aime bien essayer, continuer d’apprendre, faire les choses proprement. Cette année j’aimerai creuser le craft.J’aime beaucoup le sport (bad, course à pied, muscu, surf), essayer un peu tout. Je fais du badminton depuis 12-13 ans. J’occupe mon temps entre le sport, passer du temps avec ma copine avec qui je vis depuis 8 ans, les jeux de société, les console, les sorties, boire des coups et jouer aux flechettes. Et aussi les séries et film, beaucoup. :D",
+            b:"Juin 2021, 1 an et demi. Avant j’étais chez system U, ils ont monté une équipe centrale qui répand les bonnes pratiques. Z était présent en prestation, je les trouvais trop cool, tout ceux que je rencontrais. J'étais à 45 minutes de voiture et post covid j'ai voulu être plus prêt. Zenika, j’avais eu que des bons echo et du coup j’ai postulé et je suis très content d’être arrivé là.",
+            c:"Consultant fullstack, dev / lead dev",
+            d:"J'ai vu une offre linkedin, j'avais une vision de Zenika d’excellence. Un contact y travaillait qui a démystifié tout ça. Je lui a proposé une cooptation et me voilà!",
+            e:"L’ambiance, très décontracte. Mes collègues sont devenus mes potes.",
+            f:"Assez semblable avec system u sur la vision du poste de dev. Un peu plus la notion d’excellence mais sinon pas trop de surprise.",
+            g:"Le mécénat de compétence. J’ai pu aider une amie a développer son site pour son association qui collecte des fonds pour lutter contre le cancer. https://www.levyeucopain.fr/",
+            h:"Ambiance - Confiance - Kiff",
+          }),
+          picture: "alan_duchene.jpg",
+        }
+      },
     ],
     [
       {
@@ -191,9 +282,29 @@ export class AppComponent {
           picture: "arthur_lutz.png",
         }
         },
-      {front: "Système U", back: { name: "", picture: ""}, disabled:false},
+      {
+        front: "Système U",
+        back: { name: "Geoffroy Begouaussel", picture: "geoffroy_begouaussel.jpg"},
+        disabled:false,
+        modal: {
+          title: "Geoffroy Begouaussel, Consultant Fullstack JS",
+          text: this.formatModalText({
+            name: "Geoffroy Begouaussel",
+            a:"Je suis dev fullstack JS mais avant je faisais surtout du front avec une grosse partie intégrateur et UX. Je suis aussi un ancien provençal.",
+            b:"15 février 2021",
+            c:"Dev fullstack Javascript",
+            d:"J'ai fait une candidature spontanée suite a une presentation de Jimmy sur GraphQL et j'ai creusé ce que c’était Zenika et paf!",
+            e:"La confiance qu’on t’accorde. Mon premier jour, j’ai reçu mon mac book pro chez moi et j’installe ce que je veux dessus. J'ai trouvé que c'était une grosse marque de confiance alors que j'arrivais juste. Très agréablement surpris.",
+            f:"Le regard des gens quand je dis que je viens de Zenika. J’ai pu faire des cours (intervenant).",
+            g:"Donner un talk à la TZ pour découvrir. Aller télétravailler où tu veux en France.",
+            h:"Liberté - Perfectionnement - Confiance",
+          }),
+          picture: "geoffroy_begouaussel.jpg",
+        }
+      },
       {front: "", back: { name: "", picture: ""}, disabled:true},
-      {front: "4-5 ans",
+      {
+        front: "4-5 ans",
         back: { name: "Clément Van Peuter", picture: "clement_van_peuter.png"},
         disabled:false,
         modal: {
